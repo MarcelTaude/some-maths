@@ -30,3 +30,9 @@
 
 # Debug files
 *.dSYM/
+
+# vim files
+.*.swp
+
+# compilation products
+C/simple

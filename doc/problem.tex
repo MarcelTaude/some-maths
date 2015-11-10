@@ -1,0 +1,20 @@
+
+\section{the problem}
+Find all integers which verify :
+\begin{equation}\label{eq:start}
+	a^3 + b^3 + c^3 = 1000^2.a + 1000.b + c \text{, with } a, b, c \in [0, 1000[
+\end{equation}
+We can \emph{easily} find all the integers $(a, b, c)$ verfiying \eqref{eq:start} by computing the two members of \eqref{eq:start} for every values $(a, b, c)$ from 0 to 999. Can we find a more clever way to get these values?
+
+We can transform \eqref{eq:start} in :
+\begin{equation}\label{eq:second}
+\begin{split}
+	c^3 - c &= 1000^2.a + 1000.b - a^3 - b^3 \\
+	c(c - 1)(c + 1) &= a(1000 - a)(1000 + a) + b(1000 - b^2)
+ \end{split}
+\end{equation}
+
+It becomes more obvious that the triplets $(0, 0, 0)$ and $(0, 0, 1)$ are two solutions of \eqref{eq:start}.
+
+\section{... and this is the place where I became mad}
+So much time without playing with mathematics makes things harder than I thought. Music helps me to keep cool, some good old jazz played by \emph{Lee Konitz} in the late fifties, and that's all. At least, I am playing with \LaTeX and \emph{gcc}...

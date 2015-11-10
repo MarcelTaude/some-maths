@@ -1,0 +1,70 @@
+
+\section{reboot}
+We will do it in a lighter way. We started with power 3, bad idea. 
+
+\begin{equation}\label{eq:pow2}
+	a^2 + b^2 = 100.a + b \text{ with } a, b \in [0, 100[
+\end{equation}
+
+We can make this transformation :
+\begin{equation}\label{eq:pow2bis}
+	b(b-1) = a(100 - a)
+\end{equation}
+
+We can see that the left side of \eqref{eq:pow2ter} must be even, so $a$ is even too.
+
+\subsection{the even side}
+We begin with the case of $b$ even :
+\begin{equation}\label{eq:pow2ter}
+\begin{split}
+	a &= 2 \alpha \\
+	b &= 2 \beta \\
+	2 \beta(2 \beta - 1) &= 2 \alpha(100 - 2 \alpha) \\
+	\beta(2\beta - 1) &= 2 \alpha(50 - \alpha)
+\end{split}
+\end{equation}
+
+If so, $\beta$ must be even, \emph{i.e.} :
+\begin{equation}\label{eq:pow2:4}
+\begin{split}
+	\beta &= 2 \gamma \\
+	2 \gamma (4 \gamma - 1) &= 2 \alpha (50 - \alpha) \\
+	\gamma (4 \gamma - 1) &= \alpha (50 - \alpha)
+\end{split}
+\end{equation}
+
+The good news is : 
+\begin{equation}\label{eq:pow2:5}
+\begin{split}
+	\gamma &\in [0, 25[ \\
+	\alpha &\in [0, 50[ \\
+	a &= 2 \alpha \\
+	b &= 4 \gamma
+\end{split}
+\end{equation}
+
+We have less couples $(\alpha, \gamma)$ to test.
+
+\subsection{the odd side}
+Now, we are looking at odd values of $b$:
+\begin{equation}\label{eq:pow2odd}
+\begin{split}
+	a &= 2 \alpha \\
+	b &= 2 \beta + 1\\
+	2 \beta(2 \beta + 1) &= 2 \alpha(100 - 2 \alpha) \\
+	\beta(2\beta + 1) &= 2 \alpha(50 - \alpha)
+\end{split}
+\end{equation}
+
+We comme back to the previous case with few changes :
+\begin{equation}\label{eq:pow2:5}
+\begin{split}
+	\gamma &\in [0, 25] \\
+	\alpha &\in [0, 50[ \\
+	a &= 2 \alpha \\
+	b &= 4 \gamma + 1
+\end{split}
+\end{equation}
+
+\subsection{... and now}
+It's time to write some code to test all these beautiful formulas.

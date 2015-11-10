@@ -36,3 +36,8 @@
 
 # compilation products
 C/simple
+
+# LaTex files
+*.log
+*.aux
+*.out

@@ -30,6 +30,7 @@
 
 # Debug files
 *.dSYM/
+core
 
 # vim files
 .*.swp
@@ -41,3 +42,4 @@ C/simple
 *.log
 *.aux
 *.out
+*.toc

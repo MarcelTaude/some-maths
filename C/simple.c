@@ -10,9 +10,8 @@
 
 
 
-static int64_t finds = 0;
-
-static void doit(void) {
+static int doit(void) {
+	int finds = 0;
 	int64_t a, b, c;
 
 	for (a=0; a<1000; a++) {
@@ -33,11 +32,15 @@ static void doit(void) {
 			}
 		}
 	}
+		return finds;
 }
 
 int main(void) {
+	int finds = 0;
+
 	printf ("solving a^3+b^3+c^3 = 1000^2*a + 1000*b + c\n");
-	printf("trying al combinations...\n");
-	doit();
+	printf ("trying all combinations...\n");
+	finds = doit();
+	printf ("there are %d solutions\n", finds);
 	return EXIT_SUCCESS;
 }

@@ -1,11 +1,14 @@
 # Makefile
 
-CC = gcc -pedantic -Wall -O2
+CC = gcc -pedantic -Wall -O3
 TEX = pdflatex
 
 all: build doc
 
-build: C/simple
+build: C/simple C/reboot
+		
+C/reboot: C/reboot.c
+	$(CC) $< -o $@
 
 C/simple: C/simple.c
 	$(CC) $< -o $@

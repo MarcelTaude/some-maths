@@ -37,6 +37,7 @@ core
 
 # compilation products
 C/simple
+C/reboot
 
 # LaTex files
 *.log

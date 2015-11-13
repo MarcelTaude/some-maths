@@ -44,3 +44,7 @@ C/reboot
 *.aux
 *.out
 *.toc
+out/
+
+# NetBeans
+nbproject/
